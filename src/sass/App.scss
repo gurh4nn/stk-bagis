@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: museo-sans, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@import url("https://use.typekit.net/hrp8vtq.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
+@import "./Reset.scss";
+@import "./Header.scss";
+@import "./Navbar.scss";
+@import "./Home.scss";
+@import "./Footer.scss";
+@import "./BlogCard.scss";
