@@ -16,6 +16,7 @@ function SideNav() {
       link: "kurumsal/vergi-muafiyeti",
       title: "Vergi Muafiyeti",
     },
+    
   ];
   return (
     <div className="side-nav">

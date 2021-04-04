@@ -1,19 +1,18 @@
 import React from 'react'
 import "../sass/Navbar.scss"
 import {Link} from "react-router-dom"
+import { GrSupport, GrCatalog, GrPhone, GrOrganization } from "react-icons/gr";
 
 function Navbar() {
     return (
-        <div>
            <div className="navbar">
                <ul>
-                   <Link to=""> <li>Destek</li></Link>
-                   <Link to=""> <li>Neler Yaptık</li></Link>
-                   <Link to=""> <li>Hesap Numaralarımız</li></Link>
-                   <Link to=""> <li>İletişim</li></Link>
+                   <Link to=""> <GrSupport />  <li>Destek</li></Link>
+                   <Link to=""> <GrCatalog /> <li>Neler Yaptık</li></Link>
+                   <Link to=""> <GrOrganization /> <li>Hesap Numaralarımız</li></Link>
+                   <Link to=""> <GrPhone /> <li>İletişim</li></Link>
                </ul>
            </div>
-        </div>
     )
 }
 

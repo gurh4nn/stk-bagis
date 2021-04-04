@@ -1,98 +1,135 @@
 .header {
-    position: sticky;
-    top: 0;
-    background: white;
-    .header-content {
-        display: flex;
-        justify-content: space-between;
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 20px 0 10px;
-        .logo-nav {
-            display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  background: white;
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0 10px;
+    .logo-nav {
+      display: flex;
 
-            .logo {
-                a {
-                    img {
-                        min-width: 140px;
-                        max-width: 150px;
-                        height: auto;
-                    }
-                }
-            }
-            .header-nav {
-                display: flex;
-                ul{
-                    list-style: none;
-                    display: flex;
-                    margin-block-start: 0;
-                    margin-block-end: 0;
-                    align-items: center;
-                    padding-inline-start: 40px;
-                    font-size: 18px;
-                    font-weight: 500;
-    
-                    li {
-                        padding: 10px;
-                        color: #6a7c92;
-                        font-weight: 500;
-                        font-size: 18px;
-                        &:not(:last-child) {
-                            margin-right: 10px;
-                        }
-                    }
-                }
-            }
+      .logo {
+        a {
+          img {
+            min-width: 140px;
+            max-width: 150px;
+            height: auto;
+          }
         }
-    
-        .user {
-            display: flex;
-            align-items: center;
-    
-            .login {
-                margin-right: 20px;
-                color: #6a7c92;
-                font-weight: 500;
-                font-size: 18px;
-            }
-            .donate {
-                // background-color: #323EBE;
-                color: white;
-                padding: 15px 30px;
-                border-radius: 10px;
+      }
+      .header-nav {
+        display: flex;
+        ul {
+          list-style: none;
+          display: flex;
+          margin-block-start: 0;
+          margin-block-end: 0;
+          align-items: center;
+          padding-inline-start: 40px;
+          font-size: 18px;
+          font-weight: 500;
 
-                background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-          background-size: 1800% 1800%;
-          -webkit-animation: rainbow 18s ease infinite;
--z-animation: rainbow 18s ease infinite;
--o-animation: rainbow 18s ease infinite;
-  animation: rainbow 18s ease infinite;
-          @-webkit-keyframes rainbow {
-            0%{background-position:0% 82%}
-            50%{background-position:100% 19%}
-            100%{background-position:0% 82%}
+          li {
+            padding: 10px;
+            color: #6a7c92;
+            font-weight: 500;
+            font-size: 18px;
+            &:not(:last-child) {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+
+      .login {
+        margin-right: 20px;
+        color: #6a7c92;
+        font-weight: 500;
+        font-size: 18px;
+      }
+      .donate {
+        // background-color: #323EBE;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 10px;
+
+        background: linear-gradient(
+          124deg,
+          #ff2400,
+          #e81d1d,
+          #e8b71d,
+          #e3e81d,
+          #1de840,
+          #1ddde8,
+          #2b1de8,
+          #dd00f3,
+          #dd00f3
+        );
+        background-size: 1800% 1800%;
+        -webkit-animation: rainbow 18s ease infinite;
+        -z-animation: rainbow 18s ease infinite;
+        -o-animation: rainbow 18s ease infinite;
+        animation: rainbow 18s ease infinite;
+        @-webkit-keyframes rainbow {
+          0% {
+            background-position: 0% 82%;
+          }
+          50% {
+            background-position: 100% 19%;
+          }
+          100% {
+            background-position: 0% 82%;
+          }
         }
         @-moz-keyframes rainbow {
-            0%{background-position:0% 82%}
-            50%{background-position:100% 19%}
-            100%{background-position:0% 82%}
+          0% {
+            background-position: 0% 82%;
+          }
+          50% {
+            background-position: 100% 19%;
+          }
+          100% {
+            background-position: 0% 82%;
+          }
         }
         @-o-keyframes rainbow {
-            0%{background-position:0% 82%}
-            50%{background-position:100% 19%}
-            100%{background-position:0% 82%}
+          0% {
+            background-position: 0% 82%;
+          }
+          50% {
+            background-position: 100% 19%;
+          }
+          100% {
+            background-position: 0% 82%;
+          }
         }
-        @keyframes rainbow { 
-            0%{background-position:0% 82%}
-            50%{background-position:100% 19%}
-            100%{background-position:0% 82%}
+        @keyframes rainbow {
+          0% {
+            background-position: 0% 82%;
+          }
+          50% {
+            background-position: 100% 19%;
+          }
+          100% {
+            background-position: 0% 82%;
+          }
         }
-            }
-        }
+      }
     }
-    
-    .brace-nav {
-        border-bottom: 1px solid #dadada;
-    }
+  }
+
+  .brace-nav {
+    border-bottom: 1px solid #dadada;
+  }
 }

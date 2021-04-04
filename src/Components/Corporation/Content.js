@@ -6,7 +6,7 @@ function Content() {
             <div className="content">
                 <div className="content-title">İçerik Başlığı</div>
                 <div className="content-img">
-                    <img src="http://via.placeholder.com/800x200" alt=""/>
+                    <img src="https://picsum.photos/800/200" alt=""/>
                 </div>
                 <div className="content-text">
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda optio illum nisi totam ipsa, aliquid reprehenderit harum praesentium eligendi veniam sed, consectetur consequuntur possimus quidem? Aliquid voluptatum est sint rerum?

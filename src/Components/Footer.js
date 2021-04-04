@@ -1,8 +1,10 @@
 import React from 'react'
-
+import FooterContact from "./FooterContact"
 function Footer() {
     return (
         <div className="footer">
+            
+    <FooterContact />
             <div className="footer-content">
                 <div className="footer-corporate">
                     Sivil Toplum Kuruluşu 2021

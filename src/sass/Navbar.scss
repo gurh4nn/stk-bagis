@@ -1,13 +1,25 @@
 .navbar {
     width: 50%;
+    margin-top: 70px;
     margin-right: auto;
     margin-left: auto;
     ul {
         list-style: none;
         display: flex;
+        justify-content: space-evenly;
         a {
             display: flex;
-            flex: 1 0 auto;
+            padding-right: 10px;
+            margin-bottom: 10px;
+           li,
+           svg {
+               font-size: 18px;
+               padding: 10px;
+           }
+        }
+
+        a:not(:last-child) {
+            border-right: 1px solid gray;
         }
     }
 }
