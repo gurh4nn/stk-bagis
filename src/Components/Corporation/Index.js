@@ -1,35 +1,37 @@
-import React from 'react'
-import {Link} from "react-router-dom"
-import Content from "./Content"
+import React from "react";
+import { Link } from "react-router-dom";
+import Content from "./Content";
 
 function SideNav() {
-    const sideNavItem = [
-        {
-            link: "#",
-            title: "Hakkımızda"
-        },
-        {
-            link: "#",
-            title: "Tarihçe"
-        },
-        {
-            link: "#",
-            title: "Vergi Muafiyeti"
-        },
-    ]
-    return (
-        <div className="side-nav">
-      <div className="corpotate-title">
-          Kurumsal
-      </div>
-      <div className="nav-list">
+  const sideNavItem = [
+    {
+      link: "kurumsal/hakkimizda",
+      title: "Hakkımızda",
+    },
+    {
+      link: "kurumsal/tarihce",
+      title: "Tarihçe",
+    },
+    {
+      link: "kurumsal/vergi-muafiyeti",
+      title: "Vergi Muafiyeti",
+    },
+  ];
+  return (
+    <div className="side-nav">
+      <div className="corporation-nav">
+        <div className="corpotate-title">Kurumsal</div>
+        <div className="nav-list">
           {sideNavItem.map((nav, index) => (
-              <Link to={nav.link} key={index}>{nav.title}</Link>
+            <Link to={nav.link} key={index}>
+              {nav.title}
+            </Link>
           ))}
+        </div>
       </div>
       <Content />
-        </div>
-    )
+    </div>
+  );
 }
 
-export default SideNav
+export default SideNav;

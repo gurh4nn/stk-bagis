@@ -1,16 +1,25 @@
 import React from "react";
 import Slider from "react-slick";
+import {Link} from "react-router-dom";
 function HomeSlider() {
   const slides = [
     {
       title: "First item",
       description: "Lorem ipsum",
-      image: "http://via.placeholder.com/1500x500",
+      image: "https://picsum.photos/1500/500",
+      link: "/",
     },
     {
       title: "Second item",
-      description: "Lorem ipsum",
-      image: "http://via.placeholder.com/1500x500",
+      description: "Lorem ipsum for secont item",
+      image: "https://picsum.photos/1500/501",
+      link: "/",
+    },
+    {
+      title: "Third item",
+      description: "Lorem ipsum for third item. Third slider long text.",
+      image: "https://picsum.photos/1500/502",
+      link: "/",
     },
   ];
   var settings = {
@@ -33,11 +42,11 @@ function HomeSlider() {
           // >
           <div className="slider-item" key={index}>
             <img style={{width:"100%"}} src={item.image} alt=""/>
-          {/* <div className="slider-item-content">
-          <h1>{item.title}</h1>
+          <div className="slider-item-content">
+          <h2>{item.title}</h2>
             <p>{item.description}</p>
-            <button>İncele</button>
-          </div> */}
+            <Link to="/"><button>İncele</button></Link>
+          </div>
           </div>
         ))}
       </Slider>

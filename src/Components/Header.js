@@ -10,7 +10,7 @@ function Header() {
           <div className="logo-nav">
             <div className="logo">
               <Link to="">
-                <img src="http://via.placeholder.com/140x54" alt="" />
+                <img src="/img/logo.svg" alt="" />
               </Link>
             </div>
             <div className="header-nav">
@@ -28,7 +28,7 @@ function Header() {
             </div>
           </div>
           <div className="user">
-            <Link to="">
+            <Link to="/kullanici">
               <div className="login">Giriş Yap</div>
             </Link>
             <Link to="">

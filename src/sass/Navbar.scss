@@ -5,10 +5,9 @@
     ul {
         list-style: none;
         display: flex;
-        li {
+        a {
             display: flex;
             flex: 1 0 auto;
-            // justify-content: space-between;
         }
     }
 }

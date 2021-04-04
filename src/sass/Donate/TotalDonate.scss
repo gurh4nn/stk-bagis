@@ -1,0 +1,38 @@
+.total-donate {
+    background-image: url("https://img.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg?size=626&ext=jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    .donate {
+        padding: 50px 150px;
+        
+        .donate-title {
+            text-align: center;
+            h2 {
+                font-size: 28px;
+                padding: 20px;
+            }
+        }
+
+        .donate-description {
+            max-width: 800px;
+            margin: 0 auto
+        }
+
+        .donate-count {
+            border: 5px solid red;
+            padding: 30px 50px;
+            width: 30%;
+            display: block;    
+            text-align: center;
+            margin: 30px auto;
+            font-size: 26px;
+            .hr {
+                background-color: orange;
+                height: 3px;
+                width: 50%;
+                margin: 20px auto;
+            }
+        }
+    }
+}

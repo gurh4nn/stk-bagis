@@ -10,12 +10,29 @@ a {
   color: black;
 }
 
+button {  
+  outline: 0;
+  
+}
+
 @import url("https://use.typekit.net/hrp8vtq.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
 @import "./Reset.scss";
+@import "./Corporation.scss";
+@import "./User/Login.scss";
+@import "./Donate/Complete.scss";
+
+
+//Home
 @import "./Header.scss";
 @import "./Navbar.scss";
 @import "./Home.scss";
-@import "./Footer.scss";
 @import "./BlogCard.scss";
+@import "./Home/Slider.scss";
+@import "./Footer.scss";
+//Media
+@import "./News/Media.scss";
+
+//Donate 
+@import "./Donate/TotalDonate.scss";

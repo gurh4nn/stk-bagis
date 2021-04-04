@@ -12,9 +12,8 @@ function Footer() {
                         <li>Footer Nav 1</li>
                         <li>Footer Nav 2</li>
                         <li>Footer Nav 3</li>
-                        <li>Footer Nav 4</li>
-                        <li>Footer Nav 5</li>
                     </ul>
+                    
                 </div>
             </div>
         </div>

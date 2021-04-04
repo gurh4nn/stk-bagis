@@ -1,0 +1,23 @@
+.login {
+    .login-form {
+        width: 30%;
+        margin: 10% auto;
+        border: 1px solid steelblue;
+        padding: 20px;
+        form {
+            input{
+                display: block;
+                width: 90%;
+                padding: 10px;
+                margin-top: 20px;
+            }
+    
+            button {
+                padding: 10px 30px;
+                margin-top: 20px;
+                background-color: #323EBE;
+                color: white;
+            }
+        }
+    }
+}

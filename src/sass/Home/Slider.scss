@@ -1,0 +1,45 @@
+.home-content {
+  background: #e5e5e5;
+  .home-slider {
+    position: relative;
+    .slick-slider {
+      .slider-item {
+        .slider-item-content {
+          position: absolute;
+          top: 10%;
+          margin-left: 50px;
+          padding: 26px 36px 10px;
+          max-width: 250px;
+          max-height: 150px;
+          background-color:rgba(255, 255, 255, 0.5);
+          border-radius: 20px;
+          
+          h2 {
+            font-size: 24px;
+            line-height: 1.2;
+            font-weight: 600;
+          }
+
+          p {
+            overflow: hidden;
+            margin: 10px 0 20px;
+          }
+
+          button {
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            padding: 10px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

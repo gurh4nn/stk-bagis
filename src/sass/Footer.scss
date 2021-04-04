@@ -1,14 +1,26 @@
 .footer {
-   .footer-content  {
+  background-color: #141414;
+  .footer-content {
+    color: white;
+    width: 80%;
+    opacity: .8;
+    font-size: 14px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     align-items: center;
     // .footer-corporate {
-   
+
     // }
     .footer-nav {
-        ul {
-            list-style: none;
+        margin-left: 20px;
+      ul {
+        list-style: none;
+        li {
+            padding: 5px;
         }
+      }
     }
-   }
+  }
 }
