@@ -31,7 +31,7 @@ function Header() {
             <Link to="/kullanici">
               <div className="login">Giriş Yap</div>
             </Link>
-            <Link to="">
+            <Link to="/bagis">
               <div className="donate">
                 <span>Bağış Yap</span>
               </div>

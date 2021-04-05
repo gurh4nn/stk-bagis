@@ -1,0 +1,71 @@
+.donate-page {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  margin-bottom: 80px;
+  .donate-card {
+    width: 300px;
+    margin-right: 30px;
+    border: 1px solid lightgray;
+
+    &:hover {
+        box-shadow: 5px 5px 10px #888888;
+    }
+
+    .donate-title {
+      text-align: center;
+      font-weight: 600;
+      font-size: 18px;
+      margin: 16px;
+    }
+    .donate-img {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .donate-description {
+      margin: 10px 10px 20px;
+    }
+
+    .donate-price {
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+      text-align: center;
+
+      .price-list {
+        padding: 10px;
+        border: 1px solid lightgray;
+        display: inline-block;
+        cursor: pointer;
+        margin: 10px;
+      }
+      input {
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      .input-click {
+        background-color: red;
+      }
+
+      button {
+        padding: 16px 50px;
+        background-color: #fe9c0e;
+        border-radius: 10px;
+        border: none;
+        margin: 10px;
+      }
+    }
+  }
+}
