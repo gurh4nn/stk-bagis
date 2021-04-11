@@ -1,21 +1,66 @@
-.login {
+.login-page {
+    background: url("https://cdna.artstation.com/p/assets/images/images/011/428/098/large/graham-tattersall-flat-background-mountains.jpg?1529525121");
+    background-size: contain;
+    border: 1px solid transparent;
     .login-form {
-        width: 30%;
-        margin: 10% auto;
+        width: 40%;
+        margin: 5% auto 10%;
         border: 1px solid steelblue;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.26) 5px 5px 5px 5px;
         padding: 20px;
+        display: flex;
+        align-items: center;
+        background: white;
+        .user-icon {
+            display: inline-block;
+            width: 50%;
+            img {
+                width: 50%;
+                border: 1px solid lightgray;
+                border-radius: 50%;
+                &:hover {
+                    filter: drop-shadow(0 0 0.75rem crimson);;
+                }
+            }
+        }
         form {
+            width: 40%;
+            margin-right: 5%;
             input{
                 display: block;
-                width: 90%;
+                width: 100%;
                 padding: 10px;
                 margin-top: 20px;
+                border-radius: 20px;
+                text-align: center;
+                &:hover {
+                    filter: drop-shadow(0 0 0.75rem lightgray);;
+                }
+            }
+            .username {
+                position: relative;
+                .username-icon {
+                    position: absolute;
+                    top: 12px;
+                    left: 10px;
+                }
+            }
+            .password {
+                position: relative;
+                .password-icon {
+                    position: absolute;
+                    top: 12px;
+                    left: 10px;
+                }
             }
     
             button {
                 padding: 10px 30px;
                 margin-top: 20px;
-                background-color: #323EBE;
+                background-color: #57B847;
+                border-radius: 20px;
+                width: 110%;
                 color: white;
             }
         }

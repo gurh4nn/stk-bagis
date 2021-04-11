@@ -12,6 +12,7 @@ a {
 
 button {  
   outline: 0;
+  border: none;
   
 }
 
@@ -23,8 +24,6 @@ button {
 @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
 @import "./Reset.scss";
-@import "./Corporation.scss";
-@import "./User/Login.scss";
 @import "./Donate/Complete.scss";
 
 
@@ -38,10 +37,16 @@ button {
 //Media
 @import "./News/Media.scss";
 
+//Corporate 
+@import "./Corporate/Corporation.scss";
+@import "./Corporate/BankAccount.scss";
+@import "./Corporate/Contact.scss";
+
 //Donate 
 @import "./Donate/TotalDonate.scss";
 @import "./Donate/Donate.scss";
 
 //User
 @import "./User/Dashboard.scss";
+@import "./User/Login.scss";
 @import "./User/DashboardContent.scss";

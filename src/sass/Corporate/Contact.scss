@@ -1,0 +1,66 @@
+.contact-page {
+  background: url("https://static.vecteezy.com/system/resources/thumbnails/000/688/468/original/abstract-flat-geometric-in-black-background.jpg")
+    no-repeat fixed center;
+  height: 100vh;
+  background-size: 100% 100%;
+  .contact-form {
+    color: white;
+    position: relative;
+    .contact-item {
+      background: #1e0549e7;
+      border-radius: 20px;
+      width: 60%;
+      position: absolute;
+      margin: auto;
+      display: flex;
+      top: 150px;
+      left: 0;
+      right: 0;
+      &:hover {
+          box-shadow: #1e054952 10px 10px 5px 5px;
+      }
+      .info {
+        width: 50%;
+        padding: 20px;
+        margin-top: 20px;
+        input,
+        label,
+        select {
+          display: block;
+          width: 80%;
+          margin: 10px;
+        }
+        input {
+          padding: 10px 0;
+        }
+        select {
+          padding: 12px;
+        }
+      }
+      .message {
+        width: 50%;
+        margin-top: 36px;
+        label {
+          display: block;
+          margin: 10px;
+        }
+        #message {
+          width: 90%;
+          height: 50%;
+        }
+        #submit {
+          width: 50%;
+          display: block;
+          margin: 30px auto 10px;
+          padding: 12px 10px;
+          border-radius: 10px;
+          border: none;
+          cursor: pointer;
+          background: #30124e;
+          color: white;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
