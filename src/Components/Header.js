@@ -1,8 +1,27 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
-
+import {logoutUser} from "../Auth/authSlice"
+import {useDispatch,useSelector} from "react-redux"
+import firebase from "../Config/Firebase";
+import { setCurrentUser } from "../Auth/authSlice";
 function Header() {
+
+  const {currentUser} = useSelector((state)=>state.auth);
+  const dispatch = useDispatch();
+  const handleLogOut = ()=> {
+      dispatch(logoutUser());
+
+
+  };
+
+
+//   const trigger = (
+//     <span>
+//         <span avatar src={currentUser.photoURL}/>
+//     </span>
+// )
+
   return (
     <div>
       <div className="header">
@@ -28,8 +47,9 @@ function Header() {
             </div>
           </div>
           <div className="user">
-            <Link to="/kullanici">
-              <div className="login">Giriş Yap</div>
+          {/* <button className="dropbtn" icon={null} >{trigger}</button> */}
+            <Link to="/panel">
+              <div className="login" onClick={()=> handleLogOut()}>Giriş Yap</div>
             </Link>
             <Link to="/bagis">
               <div className="donate">

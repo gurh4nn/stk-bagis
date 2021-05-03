@@ -1,36 +1,41 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Content from "./Content";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 
 function SideNav() {
-  const sideNavItem = [
-    {
-      link: "kurumsal/hakkimizda",
-      title: "Hakkımızda",
-    },
-    {
-      link: "kurumsal/tarihce",
-      title: "Tarihçe",
-    },
-    {
-      link: "kurumsal/vergi-muafiyeti",
-      title: "Vergi Muafiyeti",
-    },
-    
-  ];
+
   return (
     <div className="side-nav">
       <div className="corporation-nav">
-        <div className="corpotate-title">Kurumsal</div>
+          <Tabs>
+            <TabList>
+              <Tab>Hakkımızda</Tab>
+              <Tab>Tarihçe</Tab>
+              <Tab>Vergi Muafiyeti</Tab>
+            </TabList>
+
+            <TabPanel>
+              <Content title="Hakkımızda" path="hakkimizda"/>
+            </TabPanel>
+            <TabPanel>
+              <Content title="Tarihçe" path="tarihce" />
+            </TabPanel>
+            <TabPanel>
+              <Content title="Vergi Muafiyeti" path="vergi" />
+            </TabPanel>
+          </Tabs>
+
+        {/* <div className="corpotate-title">Kurumsal</div>
         <div className="nav-list">
           {sideNavItem.map((nav, index) => (
             <Link to={nav.link} key={index}>
               {nav.title}
             </Link>
           ))}
-        </div>
+        </div> */}
       </div>
-      <Content />
+      {/* <Content /> */}
     </div>
   );
 }
