@@ -15,7 +15,7 @@ const Login = ({ history }) => {
 
   useEffect(() => {
     if (currentUser) {
-      history.push("/");
+      history.push("/panel");
     }
   }, [currentUser]);
 

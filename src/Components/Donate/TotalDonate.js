@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 function TotalDonate() {
+    const [totalDonateMap, setTotalDonateMap] = useState([]);
+    useEffect(() => {
+        axios
+          .get("https://6086462fd14a870017578fbc.mockapi.io/totalDonate")
+          .then((response) => setTotalDonateMap(response.data));
+      }, []);
+
     const totalDonate = {Donate: "1000₺", numberOFDonate: 20,}
     return (
         <div className="total-donate">
@@ -8,10 +16,11 @@ function TotalDonate() {
                 <div className="donate-title">
                     <h2>Toplam Bağış</h2>
                 </div>
+                {totalDonateMap.map((totalDonates, value) => (
                 <div className="donate-description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam corrupti nobis dolore eaque vero sit voluptates ullam iure incidunt. Fuga at voluptas provident doloribus optio, dignissimos voluptatibus laboriosam reprehenderit aut.
-                    Laboriosam tempore debitis quo ipsa eaque facilis quasi dolores deserunt nam, harum dolorum atque nihil reiciendis in inventore consequatur, esse ab officiis doloribus dolore tenetur animi. Veniam rem excepturi perspiciatis.
+                   {totalDonates.total_desc}
                 </div>
+                      ))}
                 <div className="donate-count">
                     <div className="donate-price">
                         Total Donate Price: 

@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setCurrentUser } from "../../Auth/authSlice";
 import firebase from "../../Config/Firebase";
 import { useHistory } from "react-router-dom";
+import UpdateTotalDonate from "./UpdateTotalDonate";
 
 function Index() {
 
@@ -49,6 +50,9 @@ function Index() {
           <Tab>
             <FaMailBulk /> Footer İletişim Bilgileri
           </Tab>
+          <Tab>
+            <FaMailBulk /> Toplam Bağış Açıklama
+          </Tab>
         </TabList>
 
         <TabPanel>
@@ -62,6 +66,9 @@ function Index() {
         </TabPanel>
         <TabPanel>
           <FooterContact />
+        </TabPanel>
+        <TabPanel>
+          <UpdateTotalDonate />
         </TabPanel>
       </Tabs>
     </div>

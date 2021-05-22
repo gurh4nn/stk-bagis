@@ -49,7 +49,8 @@ function Header() {
           <div className="user">
           {/* <button className="dropbtn" icon={null} >{trigger}</button> */}
             <Link to="/panel">
-              <div className="login" onClick={()=> handleLogOut()}>Giriş Yap</div>
+              {/* <div className="login" onClick={()=> handleLogOut()}>Giriş Yap</div> */}
+              <div className="login">Giriş Yap</div>
             </Link>
             <Link to="/bagis">
               <div className="donate">
