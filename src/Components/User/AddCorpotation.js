@@ -4,22 +4,21 @@ import axios from "axios"
 function AddCorpotation() {
 
     const [corpotationAdd, setCorpotationAdd] = useState({
-        title: "",
-        desc: "",
+        content: "",
         img: ""
     })
 
     const handleSubmit = (e) => {
-        if(corpotationAdd.corporate_page !== "" && corpotationAdd.desc !== "" && corpotationAdd.img !== "") {
+        // if(corpotationAdd.corporate_page !== "" && corpotationAdd.content !== "" && corpotationAdd.img !== "") {
 
             axios
             .put("https://6086462fd14a870017578fbc.mockapi.io/corporation", corpotationAdd )
             .then((response) => {
                 console.log(response)
             });
-        }else {
-            alert("Lütfen gerekli alanları doldurunuz.")
-        }
+        // }else {
+        //     alert("Lütfen gerekli alanları doldurunuz.")
+        // }
     }
 
     const handleChange = (e) => {
@@ -38,7 +37,7 @@ function AddCorpotation() {
                <option value="tarihce">Tarihçe</option>
                <option value="vergi">Vergi Muafiyeti</option>
            </select>
-           <input type="text" name="desc" id="desc" placeholder="Description Giriniz" value={corpotationAdd.desc}  onChange={handleChange} />
+           <input type="text" name="content" id="desc" placeholder="Description Giriniz" value={corpotationAdd.content}  onChange={handleChange} />
            <input type="text" name="img" id="image" placeholder="Görsel Adresini Giriniz" value={corpotationAdd.img}  onChange={handleChange} />
            <button type="submit">Gönder</button>
         </form>
