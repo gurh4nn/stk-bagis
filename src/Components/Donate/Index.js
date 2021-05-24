@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import cn from "classnames";
 import axios from "axios";
 import Stripe from "./Stripe";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Index() {
   const [inputPrice, setInputPrice] = useState({
@@ -27,7 +29,16 @@ function Index() {
         (item = {
           ...item,
           selectedType: ind === index ? key : null,
-          selectedPrice: ind === index ? key == 0 ? 1000 : key == 1 ? 2000 : key == 2 ? 5000 : 10000 : null,
+          selectedPrice:
+            ind === index
+              ? key == 0
+                ? 1000
+                : key == 1
+                ? 2000
+                : key == 2
+                ? 5000
+                : 10000
+              : null,
         })
     );
     setDonateType(newList);
@@ -37,12 +48,23 @@ function Index() {
   }
 
   function scrollPayment() {
-    setShowItem(true);
-    setTimeout(function(){
-      document.getElementById("pay-form").scrollIntoView({behavior: "smooth", block: "end", inline: "end"});
-     }, 500);
+    if (inputPrice < 0) {
+      const notify = () => toast.warn("Lütfen Geçerli Bir Tutar Giriniz!");
+      notify();
+    } else {
+      setShowItem(true);
+      setTimeout(function () {
+        document
+          .getElementById("pay-form")
+          .scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "center",
+          });
+      }, 500);
+    }
   }
-
+  console.log(inputPrice)
   return (
     <div className="donate-page">
       {donateType.map((type, index) => (
@@ -52,7 +74,9 @@ function Index() {
             <div className="donate-img">
               <img src={type.img} alt="" />
             </div>
-            <div className="donate-title">{type.title}</div>
+            <div className="donate-title" id="donate-card-title">
+              {type.title}
+            </div>
             <div className="donate-description">{type.desc}</div>
           </div>
 
@@ -73,13 +97,15 @@ function Index() {
               // min="0"
               name="price"
               id="price"
-              value={type.selectedPrice}
+              defaultValue={type.selectedPrice}
               pattern="^([0-9]$"
               placeholder="0₺"
               onChange={(e) => {
                 setInputPrice(e.target.value);
               }}
             />
+
+            <label style={{display:"block"}}>Ödenecek Tutar: {inputPrice.length >= 1 || type.selectedPrice ? inputPrice/100 : "0"} ₺</label>
 
             <button type="submit" onClick={scrollPayment}>
               Bağış Yap
@@ -88,6 +114,7 @@ function Index() {
         </div>
       ))}
       {showItem ? <Stripe price={inputPrice} /> : ""}
+      <ToastContainer />
     </div>
   );
 }

@@ -10,6 +10,7 @@ import Contact from "./Components/Corporation/Contact"
 import Login from "./Auth/Login"
 import Register from "./Auth/Register"
 import DashboardIndex from "./Components/User/Index"
+import BlogDetail from './Components/Blog/BlogDetail';
 
 function App() {
   return (
@@ -26,6 +27,10 @@ function App() {
         <Route exact path="/register" component={Register} />
         <Route exact path="/kampanya-ekle" component={Register} />
         <Route exact path="/panel" component={DashboardIndex} />
+        <Route exact path="/banka-hesaplari" component={BankAccount} />
+        <Route exact path="/blog/:id">
+          <BlogDetail/>
+        </Route>
       </Route>
     </Switch>
      <Footer />

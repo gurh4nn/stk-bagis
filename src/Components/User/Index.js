@@ -3,8 +3,8 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import DashboardContent from "./DashboardContent";
 import AddDonate from "./AddDonate";
-import { FaHome, FaDonate, FaWikipediaW, FaMailBulk } from "react-icons/fa";
-import AddCorpotation from "./AddCorpotation";
+import { FaHome, FaDonate, FaWikipediaW, FaMailBulk, FaBlogger } from "react-icons/fa";
+import AddCorpotation from "./AddCorpotationHakkimizda";
 import FooterContact from "./UpdateFooterContact";
 
 //Auth
@@ -13,6 +13,8 @@ import { setCurrentUser } from "../../Auth/authSlice";
 import firebase from "../../Config/Firebase";
 import { useHistory } from "react-router-dom";
 import UpdateTotalDonate from "./UpdateTotalDonate";
+import AddBlog from "./AddBlog";
+import CorpPage from "./CorpPage";
 
 function Index() {
 
@@ -53,6 +55,9 @@ function Index() {
           <Tab>
             <FaMailBulk /> Toplam Bağış Açıklama
           </Tab>
+          <Tab>
+            <FaBlogger /> Blog İçeriği Ekle
+          </Tab>
         </TabList>
 
         <TabPanel>
@@ -62,13 +67,16 @@ function Index() {
           <AddDonate />
         </TabPanel>
         <TabPanel>
-          <AddCorpotation />
+          <CorpPage />
         </TabPanel>
         <TabPanel>
           <FooterContact />
         </TabPanel>
         <TabPanel>
           <UpdateTotalDonate />
+        </TabPanel>
+        <TabPanel>
+          <AddBlog />
         </TabPanel>
       </Tabs>
     </div>

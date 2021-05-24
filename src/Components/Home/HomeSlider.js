@@ -4,21 +4,21 @@ import {Link} from "react-router-dom";
 function HomeSlider() {
   const slides = [
     {
-      title: "First item",
-      description: "Lorem ipsum",
-      image: "https://picsum.photos/1500/500",
+      // title: "First item",
+      // description: "Lorem ipsum",
+      image: "https://onlinebagis.mehmetcik.org.tr/OnlineBagis/temp/onlineBagisBanner1.jpeg?pfdrid_c=true",
       link: "/",
     },
     {
-      title: "Second item",
-      description: "Lorem ipsum for secont item",
-      image: "https://picsum.photos/1500/501",
+      // title: "Second item",
+      // description: "Lorem ipsum for secont item",
+      image: "https://www.yyd.org.tr/uploads/2021/03/duzenli-bagis-banner_w630_h160_op.jpg",
       link: "/",
     },
     {
-      title: "Third item",
-      description: "Lorem ipsum for third item. Third slider long text.",
-      image: "https://picsum.photos/1500/502",
+      // title: "Third item",
+      // description: "Lorem ipsum for third item. Third slider long text.",
+      image: "https://www.yyd.org.tr/uploads/2021/03/kurban-banner_w630_h160_op.jpg",
       link: "/",
     },
   ];
@@ -41,12 +41,12 @@ function HomeSlider() {
           //   // }}
           // >
           <div className="slider-item" key={index}>
-            <img style={{width:"100%"}} src={item.image} alt=""/>
-          <div className="slider-item-content">
+            <img style={{width:"100%", maxHeight: "400px"}} src={item.image} alt=""/>
+          {/* <div className="slider-item-content">
           <h2>{item.title}</h2>
             <p>{item.description}</p>
             <Link to="/"><button>İncele</button></Link>
-          </div>
+          </div> */}
           </div>
         ))}
       </Slider>

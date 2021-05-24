@@ -4,6 +4,8 @@ import { Link, withRouter } from "react-router-dom";
 import { loginUser } from "./authSlice";
 import { unwrapResult } from "@reduxjs/toolkit";
 import styles from "./auth.module.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = ({ history }) => {
   const dispatch = useDispatch();

@@ -22,4 +22,33 @@
             border-right: 1px solid gray;
         }
     }
+
+    @media (max-width: 1000px) {
+        margin-top: 80px;
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            a {
+                display: flex;
+                padding-right: 10px;
+                margin-bottom: 10px;
+                align-items: center;
+                text-align: center;
+               li {
+                   font-size: 14px;
+                   padding: 0;
+                   margin-right: 5px;
+                   margin-left: 5px;
+               }
+               svg {
+                   display: none;
+               }
+            }
+    
+            a:not(:last-child) {
+                border-right: 1px solid gray;
+            }
+        }
+    }
 }

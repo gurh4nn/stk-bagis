@@ -13,6 +13,7 @@ function AddDonate() {
         donatePrice: [10,20,50,100], 
         title: "",
         selectedType: null,
+        selectedPrice: null,
         desc: "",
         img: ""
     })
@@ -29,6 +30,20 @@ function AddDonate() {
             alert("Lütfen gerekli alanları doldurunuz.")
         }
     }
+
+    // const [blogList, setBlogList] = useState([]);
+    // const [updateblogList, setUpdateBlogList] = useState([]);
+    // useEffect(() => {
+    //   axios
+    //     .all([
+    //         axios.get("https://6086462fd14a870017578fbc.mockapi.io/donate"),
+    //         axios.put("https://6086462fd14a870017578fbc.mockapi.io/donate")
+    //     ])
+    //     .then((responses) => {
+    //         setBlogList(responses[0].data);
+    //         setUpdateBlogList(responses[1].data);
+    //     });
+    // }, []);
 
     const handleChange = (e) => {
         setDonateAdd({...donateAdd, [e.target.name] : e.target.value  })

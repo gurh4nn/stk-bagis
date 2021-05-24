@@ -69,5 +69,29 @@
         margin: 10px;
       }
     }
+
+    @media (max-width: 1000px) {
+      margin-right: 0;
+      margin: 30px auto;
+
+      .donate-img {
+        img {
+          max-height: 200px;
+        }
+      }
+
+      .donate-price{
+        .price-list {
+          margin: 0 5px 10px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .payment-form form {
+      width: 60vw;
+    }
+    
   }
 }

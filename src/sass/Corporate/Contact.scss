@@ -61,6 +61,18 @@
           font-size: 16px;
         }
       }
+      @media (max-width: 1000px) {
+        width: 80%;
+        font-size: 14px;
+
+        .info {
+          padding: 10px;
+        }
+
+        #submit {
+          width: 100% !important;
+        }
+      }
     }
   }
 }

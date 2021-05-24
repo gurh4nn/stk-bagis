@@ -3,6 +3,7 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import TotalDonate from "./TotalDonate";
 
 export const CheckoutForm = ({price}) => {
   console.log("fiyat", price)
@@ -15,11 +16,6 @@ export const CheckoutForm = ({price}) => {
   console.log(billingDetails.email)
 
   // console.log(billingDetails)
-
-  const [donateAdd, setDonateAdd] = useState({
-    "price": 0,
-    "donator": 0,
-})
 
   const stripe = useStripe();
   const elements = useElements();
@@ -49,6 +45,7 @@ export const CheckoutForm = ({price}) => {
           console.log("CheckoutForm.js 25 | payment successful!");
           notify("Ödeme işlemi başarıyla gerçekleştirildi. Yarınlara umut olduğunuz için teşekkür ederiz!"
           );
+          submitDonate();
         }
       } catch (error) {
         console.log("CheckoutForm.js 28 | ", error);
@@ -64,24 +61,29 @@ export const CheckoutForm = ({price}) => {
   const notify = (message) =>
     toast.info(message, {
       position: "bottom-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
+      // autoClose: 5000,
+      // hideProgressBar: false,
+      // closeOnClick: true,
+      // pauseOnHover: true,
+      // draggable: true,
+      // progress: undefined,
     });
 
+    let localPrice = Number(localStorage.getItem('totalPrice'))
+    let localDonator = Number(localStorage.getItem('totalDonator'))
 
-    const postTotalDonate = (e) => {
+    const [donateAdd, setDonateAdd] = useState({
+      price: localPrice + price,
+      donator: localDonator+1
+  })
 
+    const submitDonate = (e) => {
           axios
-          .post("https://6086462fd14a870017578fbc.mockapi.io/donate", donateAdd )
+          .put("https://6086462fd14a870017578fbc.mockapi.io/totalDonate/1", donateAdd )
           .then((response) => {
               console.log(response)
           });
   }
-
   
   return (
     <form onSubmit={handleSubmit} style={{ maxWidth: 400 }}>

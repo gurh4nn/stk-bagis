@@ -4,6 +4,17 @@
   top: 0;
   z-index: 9999;
   background: white;
+
+  .hamburger-menu {
+    svg {
+      display: none;
+
+      @media (max-width: 1000px)  {
+        display: block;
+      }
+    
+    }
+  }
   .header-content {
     display: flex;
     justify-content: space-between;
@@ -11,6 +22,11 @@
     margin-left: auto;
     margin-right: auto;
     padding: 20px 0 10px;
+
+    @media (max-width: 1000px) {
+      margin: 0 auto !important;
+      width: 90%;
+    }
     .logo-nav {
       display: flex;
 
@@ -21,6 +37,10 @@
             max-width: 150px;
             height: auto;
           }
+        }
+
+        @media (max-width: 1000px) {
+          display: none;
         }
       }
       .header-nav {
@@ -44,6 +64,24 @@
               margin-right: 10px;
             }
           }
+          .ds-hidden {
+            display: none;
+          }
+        }
+        @media (max-width: 1000px) {
+          display: none;
+
+          ul {
+            flex-direction: column;
+
+            li {
+              font-size: 14px;
+            }
+            .ds-hidden {
+              display: block;
+            }
+          }
+          
         }
       }
     }
@@ -57,6 +95,9 @@
         color: #6a7c92;
         font-weight: 500;
         font-size: 18px;
+        @media (max-width: 1000px) {
+          display: none;
+        }
       }
       .donate {
         // background-color: #323EBE;

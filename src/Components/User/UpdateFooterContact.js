@@ -3,16 +3,16 @@ import axios from "axios"
 
 function FooterContact() {
     const [contactUpdate, setContactUpdate] = useState({
-        sabit: "",
-        cep: "",
-        mail: ""
+        footer_sabit: "",
+        footer_cep: "",
+        footer_mail: ""
     })
 
     const handleSubmit = (e) => {
-        if(contactUpdate.sabit !== "" && contactUpdate.cep !== "" && contactUpdate.mail !== "") {
+        if(contactUpdate.footer_sabit !== "" && contactUpdate.footer_cep !== "" && contactUpdate.footer_mail !== "") {
 
             axios
-            .put("https://6086462fd14a870017578fbc.mockapi.io/contact/1", contactUpdate )
+            .put("https://6086462fd14a870017578fbc.mockapi.io/corporation/1", contactUpdate )
             .then((response) => {
                 console.log(response)
             });
@@ -30,9 +30,9 @@ function FooterContact() {
                 e.preventDefault();
                 handleSubmit(contactUpdate);
             } }  >
-               <input type="tel" name="sabit" id="sabit" placeholder="Sabit Hat Numarası Giriniz" value={contactUpdate.sabit} onChange={handleChange} />
-               <input type="tel" name="cep" id="cep" placeholder="Cep Telefon Numarası Giriniz" value={contactUpdate.cep}  onChange={handleChange} />
-               <input type="email" name="mail" id="mail" placeholder="Mail Adresi Giriniz" value={contactUpdate.mail}  onChange={handleChange} />
+               <input type="tel" name="footer_sabit" id="sabit" placeholder="Sabit Hat Numarası Giriniz" value={contactUpdate.footer_sabit} onChange={handleChange} />
+               <input type="tel" name="footer_cep" id="cep" placeholder="Cep Telefon Numarası Giriniz" value={contactUpdate.footer_cep}  onChange={handleChange} />
+               <input type="email" name="footer_mail" id="mail" placeholder="Mail Adresi Giriniz" value={contactUpdate.footer_mail}  onChange={handleChange} />
                <button type="submit">Gönder</button>
             </form>
         </div>

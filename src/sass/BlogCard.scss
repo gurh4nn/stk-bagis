@@ -1,6 +1,12 @@
 .blog-card {
-    margin-top: 50px;
-    margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: 30px;
+
+
+  @media (max-width: 768px) {
+    padding-left: 0;
+  }
   .card {
     // // width: 300px;
     // min-height: auto;
@@ -12,9 +18,12 @@
       border-radius: 10px;
       .card-img {
         margin-bottom: 5px;
+        height: 100%;
         img {
           border-top-left-radius: 10px;
           border-top-right-radius: 10px;
+          overflow-x: hidden;
+          max-width: 100%;
         }
       }
       .card-content {
@@ -26,22 +35,41 @@
           border-bottom-left-radius: 10px;
           border-bottom-right-radius: 10px;
           &:hover {
-          background-color: #FFC839;
-          transition: all ease-in-out 200ms;
+            background-color: #ffc839;
+            transition: all ease-in-out 200ms;
           }
 
           .content-img {
-          display: flex;
-          align-items: center;
-          width: max-content;
-          margin: auto;
-          img {
-            width: 38px;
-          }
+            display: flex;
+            align-items: center;
+            width: max-content;
+            margin: auto;
+            img {
+              width: 38px;
+            }
           }
 
           h3 {
             margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .card-item {
+        width: 90%;
+
+        .card-content {
+          .content {
+            img {
+              width: 24px !important;
+            }
+            h3 {
+              font-size: 14px;
+              margin-left: 5px;
+              word-break: break-word;
+            }
           }
         }
       }
