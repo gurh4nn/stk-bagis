@@ -32,7 +32,7 @@ export const CheckoutForm = ({price}) => {
       try {
         const {id} = paymentMethod;
         const response = await axios.post(
-          "http://localhost:8080/stripe/charge",
+          "https://stk-api.herokuapp.com/stripe/charge",
           {
             amount: price,
             id: id,
