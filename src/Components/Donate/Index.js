@@ -32,18 +32,19 @@ function Index() {
           selectedPrice:
             ind === index
               ? key == 0
-                ? 1000
+                ? 10
                 : key == 1
-                ? 2000
+                ? 20
                 : key == 2
-                ? 5000
-                : 10000
+                ? 50
+                : 100
               : null,
+            formPrice: inputPrice,
         })
     );
     setDonateType(newList);
     let priceValue =
-      key == 0 ? 1000 : key == 1 ? 2000 : key == 2 ? 5000 : 10000;
+      key == 0 ? 10 : key == 1 ? 20 : key == 2 ? 50 : 100;
     setInputPrice(priceValue);
   }
 
@@ -105,7 +106,7 @@ function Index() {
               }}
             />
 
-            <label style={{display:"block"}}>Ödenecek Tutar: {inputPrice.length >= 1 || type.selectedPrice ? inputPrice/100 : "0"} ₺</label>
+            {/* <label style={{display:"block"}}>Ödenecek Tutar: {inputPrice.length >= 1 || type.selectedPrice ? inputPrice/100 : "0"} ₺</label> */}
 
             <button type="submit" onClick={scrollPayment}>
               Bağış Yap
@@ -113,7 +114,7 @@ function Index() {
           </div>
         </div>
       ))}
-      {showItem ? <Stripe price={inputPrice} /> : ""}
+      {showItem ? <Stripe price={inputPrice*100} /> : ""}
       <ToastContainer />
     </div>
   );
